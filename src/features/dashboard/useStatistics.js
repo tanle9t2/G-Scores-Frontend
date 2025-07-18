@@ -1,7 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { useSearchParams } from "react-router-dom";
 import { getStatics } from "../../services/StatisticsService";
-
 export function useStatistics() {
     const [searchParams] = useSearchParams();
     const subjectId = searchParams.get("subjectId") ? searchParams.get("subjectId") : 1;
