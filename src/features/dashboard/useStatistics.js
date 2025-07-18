@@ -8,8 +8,6 @@ export function useStatistics() {
     const { isLoading, data: statistics, isError, error } = useQuery({
         queryKey: ["subjectId", subjectId],
         queryFn: () => getStatics(subjectId),
-        cacheTime: 0,
-        staleTime: 0,
         retry: 1,
     });
     return { isLoading, statistics, isError, error };

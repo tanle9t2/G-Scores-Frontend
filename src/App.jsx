@@ -11,10 +11,11 @@ import TopStudentPage from './pages/TopStudentPage';
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      staleTime: Infinity,
+      staleTime: 60 * 1000,
+      cacheTime: 5 * 60 * 1000,
     },
   },
-});
+})
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
