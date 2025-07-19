@@ -1,7 +1,6 @@
 import { subjectMap } from "../../utils/helper";
 
 function ScoreDetail({ fCode, scores }) {
-    console.log(scores)
     return (
         <div className="bg-white rounded-md shadow-md p-6 overflow-x-auto mt-6">
             <h2 className="font-semibold mb-4">Scores</h2>

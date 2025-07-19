@@ -26,7 +26,6 @@ function Filter({ filterField, options }) {
     }
 
     const currentLabel = options.find((o) => o.value === currentFilter)?.label;
-    console.log(currentLabel)
     return (
         <div className="relative r-0 inline-block w-64" ref={dropdownRef}>
             <button

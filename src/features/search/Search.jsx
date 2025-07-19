@@ -8,11 +8,8 @@ import { toast } from "react-toastify";
 function Search() {
     const [scores, setScores] = useState(null)
     const [fCode, setFCode] = useState(null)
-    const { isLoading, searchScores } = useSearch()
+    const { isPending, searchScores } = useSearch()
     const [state, setState] = useState("")
-    if (isLoading)
-        return <ClipLoader color="#0f172a" size={35} />
-
 
     function handleOnClick() {
         if (state.trim() === "") {
@@ -46,8 +43,8 @@ function Search() {
                         value={state}
                         onChange={(e) => setState(e.target.value)}
                     />
-                    <button onClick={() => handleOnClick()} className="bg-yellow-500 text-black px-4 py-1 rounded hover:bg-yellow-600">
-                        Submit
+                    <button disabled={isPending} onClick={() => handleOnClick()} className="bg-yellow-500 text-black px-4 py-1 rounded hover:bg-yellow-600">
+                        {isPending ? "Submiting..." : "Submit"}
                     </button>
                 </div>
             </div>

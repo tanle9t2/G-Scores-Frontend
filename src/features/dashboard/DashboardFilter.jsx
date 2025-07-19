@@ -12,10 +12,12 @@ function DashboardFilter() {
     return (
         <Filter
             filterField="subjectId"
-            options={subjects.map(s => ({
-                value: `${s.id}`,
-                label: subjectMap[s.name]
-            }))}
+            options={subjects
+                .sort((a, b) => a.id - b.id)
+                .map(s => ({
+                    value: `${s.id}`,
+                    label: subjectMap[s.name]
+                }))}
         />
     );
 }
