@@ -97,4 +97,5 @@ docker-compose up --build
 - Ensure your backend API is accessible from within the Docker container (check CORS and network settings).
 - Adjust the port numbers if you are using a different development server port.
 
+## ‼️Important: At the time you're using it, the data may not have fully loaded yet.
 ## Link demo: https://gsocreapp.netlify.app/
